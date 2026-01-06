@@ -18,8 +18,10 @@ app.use(cookieParser());
 
 import { userRouter } from "./routes/user.route.js";
 import { reportRouter } from "./routes/report.route.js";
+import { workerRouter } from "./routes/workerProfile.route.js";
 
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/user", reportRouter);
+app.use("/api/v1/user",workerRouter);
 
 export { app };
