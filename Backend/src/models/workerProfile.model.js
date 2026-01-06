@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 const workerProfileSchema = new Schema(
   {
-    user: {
+    User: {
       type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
@@ -41,7 +41,8 @@ const workerProfileSchema = new Schema(
         default: "Point",
       },
       coordinates: {
-        type: [Number], // [longitude, latitude]
+        type: [Number],
+        default : [0,0] // [longitude, latitude]
       },
     },
   },
