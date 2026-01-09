@@ -4,7 +4,7 @@ import { apiError } from "../utils/apiError.js";
 import { User } from "../models/user.model.js";
 import { WorkerProfile } from "../models/workerProfile.model.js";
 
-const workerProfile = asyncHandler(async(req,res)=>{
+const workerProfileCont = asyncHandler(async(req,res)=>{
     const { govId , vehicleNo } = req.body;
 
     const user = await User.findById(req.user._id);
@@ -62,4 +62,4 @@ const workerProfile = asyncHandler(async(req,res)=>{
   
 });
 
-export { workerProfile };
+export { workerProfileCont };
