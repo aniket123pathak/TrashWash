@@ -19,7 +19,7 @@ app.use(cookieParser());
 import { userRouter } from "./routes/user.route.js";
 import { reportRouter } from "./routes/report.route.js";
 import { workerRouter } from "./routes/workerProfile.route.js";
-import { adminRouter } from "./routes/admin.routes.js";
+import { adminRouter } from "./routes/admin.route.js";
 
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/user", reportRouter);
