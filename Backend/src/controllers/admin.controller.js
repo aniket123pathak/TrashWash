@@ -21,9 +21,9 @@ const getWorkerReq = asyncHandler(async (_, res) => {
 });
 
 const approvWorkerReq = asyncHandler(async (req, res) => {
-  const { clickedWorkerProfileId } = req.params;
+  const { workerProfileId } = req.params;
 
-  const curWorkerProfile = await WorkerProfile.findById(clickedWorkerProfileId);
+  const curWorkerProfile = await WorkerProfile.findById(workerProfileId);
 
   if (!curWorkerProfile) {
     throw new apiError(400, "Worker Profile not found");
