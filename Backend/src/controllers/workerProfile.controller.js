@@ -7,18 +7,18 @@ import { WorkerProfile } from "../models/workerProfile.model.js";
 const workerProfileCont = asyncHandler(async(req,res)=>{
     const { govId , vehicleNo } = req.body;
 
-    const user = await User.findById(req.user._id);
+    const curUser = await User.findById(req.user._id);
 
-    if(!user){
+    if(!curUser){
       throw new apiError(400,"User Doesnt exist.")
     }
 
-    if(user.role==="worker"){
+    if(curUser.role==="worker"){
         throw new apiError(400,"User is Already A worker");
     }
 
     const existedWorkerProfile = await WorkerProfile.findOne({
-      user:user._id
+      user:curUser._id
     });
 
     if(existedWorkerProfile){
@@ -34,7 +34,7 @@ const workerProfileCont = asyncHandler(async(req,res)=>{
   }
 
   const worker = await WorkerProfile.create({
-    User : user._id,
+    user : curUser._id,
     govId,
     vehicleNo,
     availabilityStatus :"inactive",

@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 const reportSchema = new Schema(
   {
-    User: {
+    user: {
       type: Schema.Types.ObjectId,
       ref: "User",
       required: true,

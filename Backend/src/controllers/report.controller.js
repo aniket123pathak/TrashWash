@@ -40,7 +40,7 @@ const reportTrash = asyncHandler(async (req, res) => {
   }
 
   const report = await Report.create({
-    User: req.user._id,
+    user: req.user._id,
     trashLocation: {
       type: "Point",
       coordinates: [trashLocation[0], trashLocation[1]],

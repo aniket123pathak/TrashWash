@@ -24,6 +24,7 @@ import { adminRouter } from "./routes/admin.routes.js";
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/user", reportRouter);
 app.use("/api/v1/user",workerRouter);
+app.use("/api/v1/admin",adminRouter);
 
 
 export { app };
