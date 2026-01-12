@@ -21,7 +21,8 @@
     "mongoose-aggregate-paginate-v2": "^1.1.4",
     "multer": "^2.0.2",
     "nodemailer": "^7.0.12",
-    "socket.io": "^4.8.3"
+    "socket.io": "^4.8.3",
+    "turf": "^3.0.14"
   },
   "devDependencies": {
     "eslint": "^9.39.2",
